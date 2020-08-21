@@ -1,0 +1,43 @@
+{% extends 'layout.html' %} {% block styles %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='main.css')}}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='results.css')}}"
+/>
+{% endblock %} {% block content %}
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <a href="/"
+        ><img src="{{url_for('static', filename='logo.png')}}" alt="IMC app"
+      /></a>
+      <a href="/">Voltar</a>
+    </div>
+    <div class="result-container">
+      <p>O resultado foi de <span>{{result}}</span></p>
+    </div>
+    <div class="contact-container">
+      <hr />
+      <div class="name-container">
+        <p>Leandro Cruvinel Lemes</p>
+      </div>
+      <div class="icons-container">
+        <a href="https://github.com/leandrocl2005"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/leandrolemes/"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="mailto:leandro.lemes@uftm.edu.br"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'layout.html' %} {% block styles %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='main.css')}}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='index.css')}}"
+/>
+{% endblock %} {% block content %}
+<div class="container">
+  <div class="form-reference-container">
+    <div class="card">
+      <div class="logo-container">
+        <img src="{{ url_for('static', filename='logo.png')}}" alt="Imc App" />
+      </div>
+
+      <p class="title">Calcular IMC</p>
+
+      <form action="/results" method="POST">
+        <div class="input-container">
+          <input type="number" id="peso" name="peso" required="required" />
+          <label for="peso">Peso (kg)</label>
+          <div class="bar"></div>
+        </div>
+
+        <div class="input-container">
+          <input type="number" id="altura" name="altura" required="required" />
+          <label for="altura">Altura (cm)</label>
+          <div class="bar"></div>
+        </div>
+
+        <div class="button-container">
+          <button type="submit"><span>Calcular</span></button>
+        </div>
+      </form>
+    </div>
+
+    <p class="credits">
+      Form inspirado no layout de
+      <a href="https://codepen.io/andytran/pen/RPBdgM/">Andy Tran</a>
+    </p>
+  </div>
+</div>
+{% endblock %}
