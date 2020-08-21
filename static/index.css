@@ -180,6 +180,10 @@ input[type="number"] {
   color: #757575;
   font-size: 0.8rem;
 }
+.credits a {
+  color: #757575;
+}
+
 .credits a:visited {
   color: #757575;
 }
