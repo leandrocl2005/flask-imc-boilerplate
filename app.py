@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 
 @app.route('/results', methods=["POST"])
-def resultado():
+def results():
     resp = request.form  # pega informações do usuário
     result = mainFunction(resp)  # usa informações para calcular resultado
     # retorna resultado para usuário
