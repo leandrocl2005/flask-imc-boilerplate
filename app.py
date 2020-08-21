@@ -2,6 +2,7 @@ from flask import Flask  # nosso app
 from flask import request  # recebe as informações do usuário
 from flask import jsonify  # transforma dicionários em json
 from flask import render_template  # carrega a página web
+import os
 
 from functions import mainFunction  # sua logica
 
@@ -22,4 +23,5 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
